@@ -26,12 +26,5 @@ pipeline {
         } 
       }     
     }
-    stage('SonarQube analysis') {
-        steps {
-             withSonarQubeEnv('sonarqube') {
-                        sh ''
-             }
-        }
-    }
   }
 }
