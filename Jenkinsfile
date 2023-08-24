@@ -2,7 +2,6 @@ pipeline {
   agent any
   tools {
     nodejs 'node-20.5.1'
-    Docker 'docker'
   }
 
   options {
