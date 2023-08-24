@@ -6,13 +6,20 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
   "devDependencies": {
-    "mocha": "^5.2.0"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sonarqube-scanner": "^3.0.1"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "nyc --reporter=html mocha test/*.js",
+    "sonar": "sonar-scanner",
+    "jest": "jest --coverage",
+    "test-sonar": "nyc --reporter=lcov --reporter=text-lcov mocha test/*.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.3"
+  }
 }
